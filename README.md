@@ -6,6 +6,7 @@
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 - Nice work!
+- Cool cool
 
 <!---
 lrdenyer/lrdenyer is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
