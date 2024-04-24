@@ -9,7 +9,23 @@
 - Cool cool
 - Admin Rights
 
-Markdown Link (subdirectory/MARKDOWN.md)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+</head>
+<body>
+
+<h1>Welcome to My GitHub Page</h1>
+
+<p>Click the link below to view my Markdown file:</p>
+
+<a href="https://lrdenyer.github.io/255_finalproject_2024/MARKDOWN">View Markdown File</a>
+
+</body>
+</html>
 
 <!---
 lrdenyer/lrdenyer is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
