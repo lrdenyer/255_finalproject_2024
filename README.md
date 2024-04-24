@@ -7,6 +7,7 @@
 - ⚡ Fun fact: ...
 - Nice work!
 - Cool cool
+- Admin Rights
 
 <!---
 lrdenyer/lrdenyer is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
