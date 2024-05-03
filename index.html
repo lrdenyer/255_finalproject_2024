@@ -80,10 +80,30 @@
   </p>
   <h2>Methodology</h2>
   <p>
-    
-    We took the following steps to clean and analysis our data. <br> <br>
+    We took the following steps to clean and analysis our data. <br> <br> 
+  </p>
+    <h3>Data Collection and Cleaning</h3>
+    <h4>OpenStreetMap Data</h4>
+    <ol value = 1>
+      <li>We first pulled all the features listed as parks in Oakland, CA</li>
+      <li>We pulled all the features listed as amenities in Oakland, CA</li>
+      <li>The amenities were then spatially join with the parks layer. Amenities that were not located within a park were dropped</li>
+      <li>We cleaned any errors from the spatial join and dropped any outlier amenities</li>
+    </ol>
+  <h4>Yelp</h4>
+  <ol value = 1>
+    <li>Using Yelp's API, we found all the parks in Oakland. </li>
+    <li>We then pulled all the ratings and reviews, using a for-loop</li>
+    <li>We kept only the Oakland parks, filtered out the filler words in the reviews and created a thematic word lists and created a thematic word lists to understand type of activities</li>
+  </ol>
+  <h4>Google Maps</h4>
+  <p>Since we were not able to get Google API access, we manually pulled the average rating and number of reviews for Oakland parks in Google Maps </p>
+<h3>Data Analysis</h3>
+  <p>With our cleaned data, we then started to analyze different aspects of parks.  </p>
     <!-- Not sure if we still want to show methodology as a table or just steps-->
-    <table class = "style2", style = "width:100%">
+  
+    <!--  
+  <table class = "style2", style = "width:100%">
       <tr>
         <th></th>
         <th>Step 1</th>
@@ -109,6 +129,7 @@
         <td>Conducted a linear regression with the average ratings and amenity types</td>
       </tr>
     </table>
+    -->
   <br> <br>
   Additionally, we overlayed the parks with the priority neighborhood and analyze the relationship between priority neighborhoods and parks, parks amenities, and park reviews. 
   
