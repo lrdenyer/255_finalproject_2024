@@ -74,9 +74,35 @@
   </p>
   <h2>Methodology</h2>
   <p>
+    <table class = "style2", style = "width:100%">
+      <tr>
+        <th></th>
+        <th>Step 1</th>
+        <th>Step 2</th>
+        <th>Step 3</th>
+      </tr>
+      <tr>
+        <td>OpenStreetMap</td>
+        <td>After pulling OSM data, we spatially joined the data with parks</td>
+        <td>Cleaned any errors from the spatial join and dropped any outlier amenities</td>
+        <td>Resulted in 10 types of park amenities</td>
+      </tr>
+      <tr>
+        <td>Pulled ratings and reviews of parks in Oakland</td>
+        <td>Filtered out any non-Oakland parks, filtered out filler words, created tehmatic word lists</td>
+        <td>Created visuals!</td>
+      </tr>
+      <tr>
+        <td>Pulled ratings of parks in Oakland</td>
+        <td>Cross-referenced the parks with the OSM Parks Data and removed null reviews</td>
+        <td>Conducted a linear regression with the average ratings and amenity types</td>
+      </tr>
+    </table>
     
   </p>
   
   <h2>Key Findings</h2>
+  <br>
+  <h3>OSM Amenities</h3>
 
 </body>
