@@ -2,7 +2,7 @@
   <style>
     body {font-family: 'Quicksand', sans-serif;}
     h2 {font-weight: bold;}
-    table th, table td {
+    table.style1 th, table.style1 td {
       border: 1px solid black;
       border-collapse: collapse;
     }
@@ -10,9 +10,17 @@
     th {
       text-align: center;
     }
-    th, td {
+    /*
+     th, td {
       padding: 15px;
     }
+    */
+    
+    table.style2 th, table.style2 td {
+      border: 1px solid black;
+      border-style: none;
+    }
+    
 
   </style>
   <title>Exploring Park Perception in Oakland</title>
@@ -42,7 +50,7 @@
   <h2>Data</h2>
   <p>
     We used the following data sources for our analysis. In the table below, we list the data used as well as the limitation we experienced for each of the data source. <br> <br>
-    <table style = "width:100%">
+    <table class = style1, style = "width:100%">
       <tr>
         <th bgcolor = '#439934'>Source</th>
         <th bgcolor = '#439934'>Data Used</th>
