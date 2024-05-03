@@ -1,6 +1,6 @@
 <head>
   <style>
-    body {font-family: 'Quicksand';}
+    body {font-family: 'Quicksand', sans-serif;}
     h2 {font-weight: bold;}  
   </style>
   <title>Exploring Park Perception in Oakland</title>
@@ -26,6 +26,38 @@
     <li>Are there certain features that are related to higher rating?</li>
     <li>What kinds of activities?</li>
   </ol>
+
+  <h2>Data</h2>
+  <p>
+    We used the following data sources for our analysis. In the table below, we list the data used as well as the limitation we experienced for each of the data source.
+    <table>
+      <tr>
+        <th>Source</th>
+        <th>Data Used</th>
+        <th>Limitation</th>
+      </tr>
+      <tr>
+        <td>OpenStreetMap</td>
+        <td>Park names and amenities data for all Oakland parks, road network, and bus stop locations</td>
+        <td>User-defined so defintion of parks varied and amenities were only included if someone contributed</td>
+      </tr>
+      <tr>
+        <td>Yelp</td>
+        <td>Reviews and ratings of Oakland parks through Yelp API</td>
+        <td>Smallest dataset. Only 12 parks in Oakland have Yelp reviews</td>
+      </tr>
+      <tr>
+        <td>Google Maps</td>
+        <td>Average ratings and number of reviews of each Oakland park</td>
+        <td>Could not get Google's API so limited to only the ratings. But had much more data points than 12 (119 to be exact!)</td>
+      </tr>
+      <tr>
+        <td>City of Oakland</td>
+        <td>Map of parks dataset - Official Park Names</td>
+        <td>Dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking</td>
+      </tr>
+    </table>
+  </p>
   <h2>Methodology</h2>
   
   <h2>Key Findings</h2>
