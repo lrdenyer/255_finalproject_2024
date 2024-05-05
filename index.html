@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html>
 <head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1">
   <style>
     body {font-family: 'Quicksand', sans-serif;}
     h2 {font-weight: bold;}
@@ -29,97 +33,105 @@
 
 <body>
   <h1>Exploring Park Perception in Oakland</h1> 
-  
-  <h2>Background</h2>
-  <p>Parks are one of the few <span style = 'color:#439934'>"free-to-be"</span> places in our   cities and towns. They are integral to health and well-being by <span style = 'color:#439934'>integral to health and well-being</span> by providing space for physical activity and been shown to help reduce stress. They've been connected to lower cawrdiovascular disease risk factors, Type 2 diabetes prevalence, and heat-related mortality risk. </p>
-  
-  <p>They also provide a <span style = 'color:#439934'>space for community,</span> whether folks are there to hang out wiht friends and family or to be alone but amongst neighbors. During the COVID-19 pandemic, people became much more aware of this important role of parks.     </p>
-  <p>
-  Environmental "hard" data metrics of parks like vegetation index and tree canopy cover are often used in characterizing parks. Park access is also a prominent data point in recent years with statewide initiatives like CA Parks for All. However, this tool uses Euclidean distance from parks alone to characterize access, without considering various travel modes. These gaps led us to explore more nuance in the data regarding park quality utilizing skills learned in this class.
- <br> <br>
-  
-  <h2>Research Question</h2>
-    <p>
-   We created a three-pronged approach for our research questions and sub-questions to guide this exploration: park access, park amenities and perception, and park disparities.
-<p>
-1. Park access
-</p>
-  <ol>
-    <li value = "1"> Which parks have adequate transit access (defined as within a walkable distance of ¼ mi)? </li>
-  </ol>
-  <p>
-2. Park amenities and perception
-</p>
-  <ol>
-    <li value = "1"> What amenities are in Oakland's parks? </li>
-    <li>How are Oakland's parks perceived (via park ratings)?</li>
-    <li>Are there certain features that are related to higher rating?</li>
-    <li>What kinds are people doing in parks?</li>
-  </ol>
-  <p>
-3. Park Disparities</p>
- <ol>
-    <li value = "1"> How does adequate transit access vary between parks in priority and non-priority neighborhoods? </li>
-    <li>AAre there spatial differences in amenity counts and types?</li>
-  </ol>
+  <section>
+    <h2>Background</h2>
+    <p>Parks are one of the few <span style = 'color:#439934'>"free-to-be"</span> places in our   cities and towns. They are integral to health and well-being by <span style = 'color:#439934'>integral to health and well-being</span> by providing space for physical activity and been shown to help reduce stress. They've been connected to lower cawrdiovascular disease risk factors, Type 2 diabetes prevalence, and heat-related mortality risk.</p>
+    
+    <p>They also provide a <span style = 'color:#439934'>space for community,</span> whether folks are there to hang out wiht friends and family or to be alone but amongst neighbors. During the COVID-19 pandemic, people became much more aware of this important role of parks.</p>
+    
+    <p>Environmental "hard" data metrics of parks like vegetation index and tree canopy cover are often used in characterizing parks. Park access is also a prominent data point in recent years with statewide initiatives like CA Parks for All. However, this tool uses Euclidean distance from parks alone to characterize access, without considering various travel modes. These gaps led us to explore more nuance in the data regarding park quality utilizing skills learned in this class.</p>
+  </section>
+
+  <section>
+    <h2>Research Question</h2>
+    <p>We created a three-pronged approach for our research questions and sub-questions to guide this exploration: park access, park amenities and perception, and park disparities.
+    <ol>
+      <li value = "1">Park access
+        <ul>
+          <li>Which parks have adequate transit access (defined as within a walkable distnace of 1/4 mile)?</li>
+        </ul>
+      </li>
+      <li>
+        Park amenities and perception
+        <ul>
+          <li>What amenities are in Oakland's parks? </li>
+          <li>How are Oakland's parks perceived (via park ratings)?</li>
+          <li>Are there certain features that are related to higher rating?</li>
+          <li>What kinds are people doing in parks?</li>
+        </ul>
+      </li>
+      <li>
+        Park Disparities
+        <ul>
+          <li>How does adequate transit access vary between parks in priority and non-priority neighborhoods? </li>
+          <li>Are there spatial differences in amenity counts and types?</li>
+        </ul>
+      </li>
+    </ol>
+    </p>
+  </section>
+
+  <section>
   <h2>Data</h2>
-  <p>
-    When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetmap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We did utilize City of Oakland’s Priority Communities data at the census tract-level for the third prong.
-<p>
-    We used the following data sources for our analysis. In the table below, we list the data used as well as the limitation we experienced for each of the data source. <br> <br>
-    <table class = style1 style = "width:100%">
-      <tr>
-        <th bgcolor = '#439934'>Source</th>
-        <th bgcolor = '#439934'>Data Used</th>
-        <th bgcolor = '#439934'>Limitation</th>
-      </tr>
-      <tr>
-        <td>OpenStreetMap</td>
-        <td>Park names and amenities data for all Oakland parks, road network, and bus stop locations</td>
-        <td>User-defined so defintion of parks varied and amenities were only included if someone contributed</td>
-      </tr>
-      <tr>
-        <td>Yelp</td>
-        <td>Reviews and ratings of Oakland parks through Yelp API</td>
-        <td>Smallest dataset. Only 12 parks in Oakland have Yelp reviews</td>
-      </tr>
-      <tr>
-        <td>Google Maps</td>
-        <td>Average ratings and number of reviews of each Oakland park</td>
-        <td>Could not get Google's API so limited to only the ratings. But had much more data points than 12 (119 to be exact!)</td>
-      </tr>
-      <tr>
-        <td>City of Oakland</td>
-        <td>Map of parks dataset - Official Park Names</td>
-        <td>Dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking</td>
-      </tr>
-    </table>
-  </p>
-  <h2>Methodology</h2>
-  <p>
-    We took the following steps to clean and analysis our data. <br> <br> 
-  </p>
+  <p>When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetmap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We did utilize City of Oakland’s Priority Communities data at the census tract-level for the third prong. The table below, we listed the data we used for our analysis as well as limitation we experienced for each source.</p>
+    <p>
+      <table class = style1 style = "width:100%">
+        <tr>
+          <th bgcolor = '#439934'>Source</th>
+          <th bgcolor = '#439934'>Data Used</th>
+          <th bgcolor = '#439934'>Limitation</th>
+        </tr>
+        <tr>
+          <td>OpenStreetMap</td>
+          <td>Park names and amenities data for all Oakland parks, road network, and bus stop locations</td>
+          <td>User-defined so defintion of parks varied and amenities were only included if someone contributed</td>
+        </tr>
+        <tr>
+          <td>Yelp</td>
+          <td>Reviews and ratings of Oakland parks through Yelp API</td>
+          <td>Smallest dataset. Only 12 parks in Oakland have Yelp reviews</td>
+        </tr>
+        <tr>
+          <td>Google Maps</td>
+          <td>Average ratings and number of reviews of each Oakland park</td>
+          <td>Could not get Google's API so limited to only the ratings. But had much more data points than 12 (119 to be exact!)</td>
+        </tr>
+        <tr>
+          <td>City of Oakland</td>
+          <td>Map of parks dataset - Official Park Names</td>
+          <td>Dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking</td>
+        </tr>
+      </table>    
+    </p>
+  </section>    
+
+  <section>
+    <h2>Methodology</h2>
+    <p>
+      We took the following steps to clean and analysis our data. 
+    </p>
     <h3>Data Collection and Cleaning</h3>
-    <h4>OpenStreetMap Data</h4>
+    <h4>OpenStreetMap Data</h4>  
     <ol value = 1>
       <li>We first pulled all the features listed as parks in Oakland, CA</li>
       <li>We pulled all the features listed as amenities in Oakland, CA</li>
       <li>The amenities were then spatially join with the parks layer. Amenities that were not located within a park were dropped</li>
       <li>We cleaned any errors from the spatial join and dropped any outlier amenities</li>
     </ol>
-  <h4>Yelp</h4>
-  <ol value = 1>
-    <li>Using Yelp's API, we found all the parks in Oakland. </li>
-    <li>We then pulled all the ratings and reviews, using a for-loop</li>
-    <li>We kept only the Oakland parks, filtered out the filler words in the reviews and created a thematic word lists and created a thematic word lists to understand type of activities</li>
-  </ol>
-  <h4>Google Maps</h4>
-  <p>Since we were not able to get Google API access, we manually pulled the average rating and number of reviews for Oakland parks in Google Maps </p>
-<h3>Data Analysis</h3>
-  <p>With our cleaned data, we then started to analyze different aspects of parks. We first mapped the parks with their respective amenities cout and plotted a histogram of parks and number of amenities. </p> 
+    <h4>Yelp</h4>
+    <ol value = 1>
+      <li>Using Yelp's API, we found all the parks in Oakland. </li>
+      <li>We then pulled all the ratings and reviews, using a for-loop</li>
+      <li>We kept only the Oakland parks, filtered out the filler words in the reviews and created a thematic word lists and created a thematic word lists to understand type of activities</li>
+    </ol>
+    <h4>Google Maps</h4>
+    <p>Since we were not able to get Google API access, we manually pulled the average rating and number of reviews for Oakland parks in Google Maps </p>
+    <h3>Data Analysis</h3>
+    <p>With our cleaned data, we then started to analyze different aspects of parks. We first mapped the parks with their respective amenities cout and plotted a histogram of parks and number of amenities. </p> 
     <p>We also analyzed bus access by plotting all bus stops against the study park locations, creating an 800-meter or 1/2 mile buffer around each park and summed the number of <b>bus stops</b> and <b>bus routes</b> within the 800 meters radius  </p>
     <p> Then, we looked at the Yelp reviews and looked at each of the parks with the thematic words. Finally, we conducted a linear regression with the 10 amenities and Google Maps park ratings.</p>
-  <p>Additionally, we overlayed the parks with the priority neighborhoods and analyzed the relationship between priority neighborhoods, parks amenities, and park ratings</p>
+    <p>Additionally, we overlayed the parks with the priority neighborhoods and analyzed the relationship between priority neighborhoods, parks amenities, and park ratings</p>
+    </section>
     <!-- Not sure if we still want to show methodology as a table or just steps-->
   
     <!--  
@@ -150,6 +162,7 @@
       </tr>
     </table>
     -->
+  <section>
   
   <h2>Key Findings</h2>
   <h3>OSM Amenities</h3>
@@ -172,6 +185,7 @@
   <h3>Park Perception</h3>
   <!-- INSERT IMAGES OF REGRESSION HERE -->
   <p></p>
+</section>
 </body>
 
 
@@ -183,8 +197,8 @@
   <ol>
     <li value = "1"> Barakat & Yousufzai. 2020. Green space and mental health for vulnerable populations: A conceptual review of the evidence. </li>
     <li>Tamosiunas et al. 2014. Accessibility and use of urban green spaces, and cardiovascular health: findings from a Kaunas cohort study. </li>
-    <li>Choi et al. 2022. Effect modification of greenness on the association between heat and mortality: A multi-city multi-country study.
-</li>
+    <li>Choi et al. 2022. Effect modification of greenness on the association between heat and mortality: A multi-city multi-country study.</li>
     <li></li>
   </ol>
-  <p>
+<p>
+</html>
