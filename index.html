@@ -4,6 +4,10 @@
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale = 1">
   <style>
+    .container{
+      display: flex;
+      
+    }
     body {font-family: 'Quicksand', sans-serif;}
     h2 {font-weight: bold;}
     table.style1 th, table.style1 td {
@@ -190,14 +194,20 @@
       </ul>
 
     The map below shows the amenity counts of each park in Oakland. Majority of the parks in Oakland do not have any listed amenities. 
-    
+      </p>
       <img src = "images/amenity_ct_map.png">
 
   <h4>Parks Perceptions</h4>
-    In addition to determining the main amenities, we also looked at the relationship between park, amenities, and reviews. 
-    <img src = "images/Yelp_review_histo.png">
-    <span>Although we only had a select number of reviews from Yelp, we wanted to see the average ratings from Yelp for each of the parks. Lake Merritt has one of the highest number reviews, but one of the lower average ratings. However, overall, all the parks reviewed in Yelp had an average rating greater tahn 4.30.</span>
-  </p>
+    <p>In addition to determining the main amenities, we also looked at the relationship between park, amenities, and reviews. </p>
+    <div class = 'container'>
+      <div class = 'image'>
+        <img src = "images/Yelp_review_histo.png">
+      </div>
+      <div class = "text"></div>
+      <p>Although we only had a select number of reviews from Yelp, we wanted to see the average ratings from Yelp for each of the parks. Lake Merritt has one of the highest number reviews, but one of the lower average ratings. However, overall, all the parks reviewed in Yelp had an average rating greater than 4.30.</p>
+    </div>
+    
+
 
   <!-- INSERT PICTURE OF AMENITIES AND PARK HERE -->
   <h3>Park Disparities</h3>
